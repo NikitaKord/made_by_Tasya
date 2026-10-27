@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MadeByTasya — Контакты</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-rose-50 text-stone-800">
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo-wrap-full">
+        <img src="assets/img/glavl.png" alt="MadeByTasya" class="logo-full" />
+      </a>
+      <nav class="main-nav" aria-label="Контекстное меню">
+        <a class="nav-btn" href="index.html">Главная</a>
+        <a class="nav-btn" href="product.html">Товар</a>
+        <a class="nav-btn" href="contacts.html">Контакты</a>
+        <button class="nav-btn cart-btn" id="cartToggle" type="button">🛒 <span id="cartCount">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container py-8">
+    <section class="info-card">
+      <h2 class="section-title">Контакты магазина</h2>
+      <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+      <p><strong>Адрес:</strong> г. Санкт-Петербург, ул. Десертная, 12</p>
+      <p><strong>Слоган:</strong> «Её руки, мой код, ваш вкус»</p>
+    </section>
+
+    <section class="info-card mt-8">
+      <h3>Карта магазина</h3>
+      <p>Найдите нас на карте — мы расположены в самом центре города.</p>
+      <iframe
+        title="Карта магазина"
+        class="map-frame"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=30.2700%2C59.9100%2C30.3600%2C59.9600&layer=mapnik&marker=59.9343%2C30.3351"
+      ></iframe>
+    </section>
+  </main>
+
+  <!-- Модалка корзины -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-modal-header">
+        <h3 id="cartTitle">Корзина</h3>
+        <button class="cart-close" id="cartClose" type="button" aria-label="Закрыть корзину">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Корзина пуста</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">Итого: <strong id="cartTotal">0 ₽</strong></div>
+        <button class="primary-btn" id="cartClear" type="button">Очистить</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 MadeByTasya</div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>

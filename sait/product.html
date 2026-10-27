@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MadeByTasya — Карточка товара</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-rose-50 text-stone-800">
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo-wrap-full">
+        <img src="assets/img/glavl.png" alt="MadeByTasya" class="logo-full" />
+      </a>
+      <nav class="main-nav" aria-label="Контекстное меню">
+        <a class="nav-btn" href="index.html">Главная</a>
+        <a class="nav-btn" href="product.html">Товар</a>
+        <a class="nav-btn" href="contacts.html">Контакты</a>
+        <button class="nav-btn cart-btn" id="cartToggle" type="button">🛒 <span id="cartCount">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container py-8">
+    <!-- Чизкейк с вишней -->
+    <section class="product-layout">
+      <img src="assets/img/cheez.jpg" alt="Чизкейк с вишней" class="product-photo" />
+      <article class="info-card">
+        <h2 class="section-title">Чизкейк с вишней</h2>
+        <p><strong>Описание:</strong> Нежный чизкейк на печенье-основе с кремовой серединой и карамельной ягодной шапкой из спелой вишни. Идеальный баланс кисло-сладкого вкуса с тонким сливочным ароматом.</p>
+        <p><strong>Состав:</strong> сливочный сыр премиум-класса, сгущённое молоко, печенье, сливочное масло, свежая вишня, ваниль, какао-порошок.</p>
+        <p><strong>Вес:</strong> 1.0 кг (8-10 порций)</p>
+        <p><strong>Цена:</strong> 2800 ₽ / шт.</p>
+        <p><strong>Наличие:</strong> В наличии</p>
+        <p><strong>Хранение:</strong> В холодильнике до 5 дней.</p>
+        <button class="primary-btn product-add-btn" type="button">Добавить в корзину</button>
+      </article>
+    </section>
+
+    <!-- Чизкейк с голубикой -->
+    <section class="product-layout mt-10">
+      <img src="assets/img/cheez2.jpg" alt="Чизкейк с голубикой" class="product-photo" />
+      <article class="info-card">
+        <h2 class="section-title">Чизкейк с голубикой</h2>
+        <p><strong>Описание:</strong> Классический чизкейк с нежной голубикой, обогащённый витаминами и натуральной сладостью лесной ягоды. Каждый кусок дарит ощущение свежести и лёгкости.</p>
+        <p><strong>Состав:</strong> сливочный сыр, печенье-основа, голубика свежая, сгущённое молоко, сливочное масло, ваниль.</p>
+        <p><strong>Вес:</strong> 1.0 кг (8-10 порций)</p>
+        <p><strong>Цена:</strong> 2800 ₽ / шт.</p>
+        <p><strong>Наличие:</strong> В наличии</p>
+        <p><strong>Хранение:</strong> В холодильнике до 5 дней.</p>
+        <button class="primary-btn product-add-btn" type="button">Добавить в корзину</button>
+      </article>
+    </section>
+
+    <!-- Клубника в шоколаде -->
+    <section class="product-layout mt-10">
+      <img src="assets/img/klubn.jpg" alt="Клубника в шоколаде" class="product-photo" />
+      <article class="info-card">
+        <h2 class="section-title">Клубника в шоколаде</h2>
+        <p><strong>Описание:</strong> Сладкая спелая клубника, обёрнутая в бархатистый горький шоколад с намёком на ваниль. Идеальное сочетание кислоты ягоды и насыщенности какао.</p>
+        <p><strong>Состав:</strong> клубника свежая, шоколад тёмный 70%, эмульгатор, ваниль, какао-масло.</p>
+        <p><strong>Вес:</strong> 250 г (6-8 ягод)</p>
+        <p><strong>Цена:</strong> 1200 ₽ / шт.</p>
+        <p><strong>Наличие:</strong> В наличии</p>
+        <p><strong>Хранение:</strong> В прохладном месте до 3 дней.</p>
+        <button class="primary-btn product-add-btn" type="button">Добавить в корзину</button>
+      </article>
+    </section>
+
+    <!-- Медовик -->
+    <section class="product-layout mt-10">
+      <img src="assets/img/med.jpg" alt="Медовик" class="product-photo" />
+      <article class="info-card">
+        <h2 class="section-title">Медовик</h2>
+        <p><strong>Описание:</strong> Легендарный тортик на основе тончайших медовых коржей с нежным сметанным кремом. Каждый слой пропитан медовым ароматом, создающим волшебный вкус.</p>
+        <p><strong>Состав:</strong> мука пшеничная, мёд натуральный, яйца, сметана, сливочное масло, сахар, разрыхлитель.</p>
+        <p><strong>Вес:</strong> 900 г (10-12 порций)</p>
+        <p><strong>Цена:</strong> 2400 ₽ / шт.</p>
+        <p><strong>Наличие:</strong> В наличии</p>
+        <p><strong>Хранение:</strong> В холодильнике до 4 дней.</p>
+        <button class="primary-btn product-add-btn" type="button">Добавить в корзину</button>
+      </article>
+    </section>
+
+    <!-- Пирожки с вишней -->
+    <section class="product-layout mt-10">
+      <img src="assets/img/pirozki.jpg" alt="Пирожки с вишней" class="product-photo" />
+      <article class="info-card">
+        <h2 class="section-title">Пирожки с вишней</h2>
+        <p><strong>Описание:</strong> Мягкие пушистые пирожки с сочной вишней, посыпанные сахарной пудрой. Идеальны к чаю или кофе благодаря лёгкому кисловатому вкусу ягоды.</p>
+        <p><strong>Состав:</strong> мука, яйца, молоко, сливочное масло, вишня свежая, дрожжи, сахар, соль.</p>
+        <p><strong>Вес:</strong> 1 шт (80г)</p>
+        <p><strong>Цена:</strong> 480 ₽ / шт.</p>
+        <p><strong>Наличие:</strong> В наличии</p>
+        <p><strong>Свежесть:</strong> Свежеприготовленные ежедневно.</p>
+        <button class="primary-btn product-add-btn" type="button">Добавить в корзину</button>
+      </article>
+    </section>
+
+    <!-- Ватрушки с малиной и творогом -->
+    <section class="product-layout mt-10">
+      <img src="assets/img/vat2.jpg" alt="Ватрушки с малиной и творогом" class="product-photo" />
+      <article class="info-card">
+        <h2 class="section-title">Ватрушки с малиной и творогом</h2>
+        <p><strong>Описание:</strong> Нежные ватрушки с творогом и свежей малиной, подрумяненные до золотистого цвета. Исконно русское лакомство, сочетающее пышное тесто и кремовистую начинку.</p>
+        <p><strong>Состав:</strong> тесто дрожжевое, творог, малина свежая, яйца, сахар, сливочное масло, соль.</p>
+        <p><strong>Вес:</strong> 1 шт (100g)</p>
+        <p><strong>Цена:</strong> 520 ₽ / шт.</p>
+        <p><strong>Наличие:</strong> В наличии</p>
+        <p><strong>Свежесть:</strong> Свежеприготовленные ежедневно.</p>
+        <button class="primary-btn product-add-btn" type="button">Добавить в корзину</button>
+      </article>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="mt-10 info-card">
+      <h3>Отзывы покупателей</h3>
+      <div class="reviews-section">
+        <article class="review-item">
+          <div class="review-header">
+            <h4>Чизкейк с вишней</h4>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p>«Божественный чизкейк! Вишня идеально дополняет сливочный вкус. При доставке пирог приехал в идеальном состоянии. Спешу заказать ещё!» — Алиса М.</p>
+        </article>
+
+        <article class="review-item">
+          <div class="review-header">
+            <h4>Чизкейк с голубикой</h4>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p>«Отличный вкус, голубика свежая и не переслащённая. Порции большие, можно есть целую неделю. Рекомендую!» — Виктор П.</p>
+        </article>
+
+        <article class="review-item">
+          <div class="review-header">
+            <h4>Медовик</h4>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p>«Классический вкус, как у бабушки. Коржи сочные, крем нежный, медовый аромат просто волшебный. Заказываю постоянно.» — Екатерина В.</p>
+        </article>
+
+        <article class="review-item">
+          <div class="review-header">
+            <h4>Клубника в шоколаде</h4>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p>«Очень красивое и вкусное лакомство. Идеально подходит в качестве подарка. Шоколад тонкий, клубника спелая. Спасибо MadeByTasya!» — Марина С.</p>
+        </article>
+
+        <article class="review-item">
+          <div class="review-header">
+            <h4>Пирожки с вишней</h4>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p>«Мягкие, пушистые, тают во рту! Вишня сочная, не сухо. К чаю просто идеально. Заказал 12 штук, съели в один день.» — Дмитрий О.</p>
+        </article>
+
+        <article class="review-item">
+          <div class="review-header">
+            <h4>Ватрушки с малиной и творогом</h4>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p>«Традиционные ватрушки как из советской пекарни. Творог не сухой, малина ароматная. Фото в каталоге даже меньше достатка показывает!» — Ольга Л.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модалка корзины -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-modal-header">
+        <h3 id="cartTitle">Корзина</h3>
+        <button class="cart-close" id="cartClose" type="button" aria-label="Закрыть корзину">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Корзина пуста</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">Итого: <strong id="cartTotal">0 ₽</strong></div>
+        <button class="primary-btn" id="cartClear" type="button">Очистить</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 MadeByTasya</div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
