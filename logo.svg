@@ -1,0 +1,7 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" rx="42" fill="#FCE7F3"/>
+  <circle cx="120" cy="120" r="82" fill="#BE4C73"/>
+  <path d="M74 145C74 123.5 91.5 106 113 106H127C148.5 106 166 123.5 166 145V149H74V145Z" fill="#FFF7F9"/>
+  <path d="M90 102C90 85.4315 103.431 72 120 72C136.569 72 150 85.4315 150 102V106H90V102Z" fill="#FFF7F9"/>
+  <text x="120" y="186" text-anchor="middle" fill="#6F213D" font-size="26" font-family="Segoe UI, Arial" font-weight="700">MBT</text>
+</svg>
