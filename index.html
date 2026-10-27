@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MadeByTasya — Главная</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-rose-50 text-stone-800">
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo-wrap-full">
+        <img src="assets/img/glavl.png" alt="MadeByTasya" class="logo-full" />
+      </a>
+      <nav class="main-nav" aria-label="Контекстное меню">
+        <a class="nav-btn" href="index.html">Главная</a>
+        <a class="nav-btn" href="product.html">Товар</a>
+        <a class="nav-btn" href="contacts.html">Контакты</a>
+        <button class="nav-btn cart-btn" id="cartToggle" type="button">🛒 <span id="cartCount">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container py-8">
+    <section class="hero">
+      <div>
+        <h2 class="section-title">Интернет-магазин кондитерских изделий</h2>
+        <p class="section-text">
+          Выбирайте торты, пирожные, штрудель и свежую выпечку. Добавляйте в корзину,
+          выбирайте доставку и оплату, отслеживайте статус заказа и получайте персональные акции.
+        </p>
+      </div>
+    </section>
+
+    <section class="image-collage" aria-label="Галерея продукции">
+      <img class="collage-img img-1" src="assets/img/cheez.jpg" alt="Чизкейк с вишней" />
+      <img class="collage-img img-2" src="assets/img/cheez2.jpg" alt="Чизкейк с голубикой" />
+      <img class="collage-img img-3" src="assets/img/klubn.jpg" alt="Клубника в шоколаде" />
+      <img class="collage-img img-4" src="assets/img/med.jpg" alt="Медовик" />
+      <img class="collage-img img-5" src="assets/img/pirozki.jpg" alt="Пирожки с вишней" />
+      <img class="collage-img img-6" src="assets/img/vat2.jpg" alt="Ватрушки с малиной и творогом" />
+    </section>
+
+    <section class="card-grid mt-10">
+      <article class="info-card">
+        <h3>Категории</h3>
+        <ul>
+          <li>Торты</li>
+          <li>Пирожные</li>
+          <li>Штрудель</li>
+          <li>Выпечка</li>
+        </ul>
+      </article>
+      <article class="info-card">
+        <h3>Статус заказа</h3>
+        <p>Введите номер и проверьте этап: «Принят» → «Готовится» → «Передан в доставку».</p>
+        <form id="statusForm" class="stack-gap">
+          <input id="orderId" class="field" placeholder="Например, MBT-1024" required />
+          <button class="primary-btn" type="submit">Проверить статус</button>
+          <p id="statusResult" class="result"></p>
+        </form>
+      </article>
+      <article class="info-card">
+        <h3>Рекомендации (API)</h3>
+        <p>Ниже выводятся новинки из внешнего API.</p>
+        <button id="loadDealsBtn" class="primary-btn" type="button">Загрузить акции и новинки</button>
+        <ul id="dealsList" class="deals-list"></ul>
+      </article>
+    </section>
+
+    <section class="card-grid mt-10">
+      <article class="info-card">
+        <h3>Форма авторизации / регистрации</h3>
+        <form id="authForm" class="stack-gap">
+          <select id="authMode" class="field">
+            <option value="register">Регистрация</option>
+            <option value="login">Авторизация</option>
+          </select>
+          <input id="authEmail" class="field" type="email" placeholder="Email" required />
+          <div class="password-wrapper">
+            <input id="authPassword" class="field" type="password" placeholder="Пароль" minlength="6" required />
+            <button type="button" class="toggle-password" data-target="authPassword" aria-label="Показать пароль">👁</button>
+          </div>
+          <button type="submit" class="primary-btn">Отправить</button>
+          <p id="authResult" class="result"></p>
+        </form>
+      </article>
+      <article class="info-card">
+        <h3>Форма покупки</h3>
+        <form id="orderForm" class="stack-gap">
+          <input id="customerName" class="field" placeholder="Имя" required />
+          <select id="productType" class="field" required>
+            <option value="">Выберите товар</option>
+            <option>Чизкейк с вишней</option>
+            <option>Чизкейк с голубикой</option>
+            <option>Клубника в шоколаде</option>
+            <option>Медовик</option>
+            <option>Пирожки с вишней</option>
+            <option>Ватрушки с малиной и творогом</option>
+          </select>
+          <select id="deliveryType" class="field" required>
+            <option value="">Способ доставки</option>
+            <option>Курьер</option>
+            <option>Самовывоз</option>
+          </select>
+          <select id="paymentType" class="field" required>
+            <option value="">Способ оплаты</option>
+            <option>Карта онлайн</option>
+            <option>Наличные при получении</option>
+          </select>
+          <button type="submit" class="primary-btn">Оформить заказ</button>
+          <p id="orderResult" class="result"></p>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <!-- Модалка корзины -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-modal-header">
+        <h3 id="cartTitle">Корзина</h3>
+        <button class="cart-close" id="cartClose" type="button" aria-label="Закрыть корзину">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Корзина пуста</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">Итого: <strong id="cartTotal">0 ₽</strong></div>
+        <button class="primary-btn" id="cartClear" type="button">Очистить</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 MadeByTasya</div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
